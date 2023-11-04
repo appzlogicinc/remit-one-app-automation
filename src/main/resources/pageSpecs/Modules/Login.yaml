@@ -1,0 +1,25 @@
+timeout: 10
+expectedTitle: Login
+elements:
+   dismissAppButton:
+      findBy: name
+      locator: IGNORE
+   splashScreen:
+      findBy: type
+      locator: XCUIElementTypeImage
+   signUpButton:
+      findBy: name
+      locator: Sign Up
+   LoginButton:
+      findBy: name
+      locator: Existing User? Login
+   LoginScreen:
+      findBy: name
+      locator: Login with email
+   WalletOption:
+      findBy: name
+      locator: Wallet
+   
+      
+
+                                                                                                                                                                                                                                                                                           

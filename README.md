@@ -1,1 +1,2 @@
-# remit-one-app-automation
+**How to automate the test case**
+
