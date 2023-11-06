@@ -1,0 +1,59 @@
+timeout: 10
+expectedTitle: AddBeneficiary
+elements:
+   dismissAppButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="IGNORE"]
+   LoginButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Existing User? Login"]
+   emailAddress:
+      findBy: xpath
+      locator: //android.widget.EditText[1]
+   password:
+      findBy: xpath
+      locator: //android.widget.EditText[2]
+   login:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Login"]
+   Beneficiary:
+      findBy: xpath
+      locator: (//android.widget.ImageView[@class='android.widget.ImageView'])[10]
+   AddBeneficiary:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Add Beneficiary"]
+   FirstName: 
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[1]
+   MiddleName: 
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[2]
+   LastName:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[3]
+   MobileNumber:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[6]
+   Address1:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[8]
+   City:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[9]
+   State:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[10]
+   PostCode:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[11]
+   IDDetails:
+      findBy: xpath
+      locator: (//android.widget.EditText[@class='android.widget.EditText'])[12]
+   Save:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Save"]
+   DuplicateEntry:
+      findBy: xpath
+      locator: (//android.view.View[@class='android.view.View'])[1]
+      
+      

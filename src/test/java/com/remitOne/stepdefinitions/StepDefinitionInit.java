@@ -5,7 +5,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.remitOne.automation.framework.TestSession;
+import com.remitOne.home.po.AddBeneficiaryPo;
+import com.remitOne.home.po.AndroidloginPo;
 import com.remitOne.home.po.LoginPO;
+import com.remitOne.home.po.VerifyLoginPo;
+import com.remitOne.home.po.VerifyLogoutPo;
 import com.remitOne.utils.PropFileHandler;
 
 public class StepDefinitionInit {
@@ -18,6 +22,14 @@ public class StepDefinitionInit {
      */
 	
 	static LoginPO loginpo;
+	
+	static AndroidloginPo androidloginpo;
+	
+	static VerifyLoginPo verifyloginpo;
+	
+	static VerifyLogoutPo verifylogoutpo;
+	
+	static AddBeneficiaryPo addbeneficiarypo;
 
 	
 	public TestSession getTestSession() throws Exception {
@@ -38,7 +50,13 @@ public class StepDefinitionInit {
 		 */
 		loginpo = new LoginPO(session);
 
+        androidloginpo =new AndroidloginPo(session);
         
+        verifyloginpo =new VerifyLoginPo(session);
+        
+        verifylogoutpo =new VerifyLogoutPo(session);
+        
+        addbeneficiarypo =new AddBeneficiaryPo(session);
         
 //		for (Entry<String, Object> entry : session.config.entrySet()) {
 //			//System.out.println("*********" + entry.getKey() + " " + entry.getValue());

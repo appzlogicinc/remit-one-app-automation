@@ -1,0 +1,12 @@
+timeout: 10
+expectedTitle: Login
+elements:
+   dismissAppButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="IGNORE"]
+   LoginButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Existing User? Login"]
+   loginScreen:
+      findBy: xpath
+      locator: //android.view.View[@content-desc="Login with email"]

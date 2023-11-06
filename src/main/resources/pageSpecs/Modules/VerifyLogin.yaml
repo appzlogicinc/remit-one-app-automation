@@ -1,0 +1,21 @@
+timeout: 10
+expectedTitle: VerifyLogin
+elements:
+   dismissAppButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="IGNORE"]
+   LoginButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Existing User? Login"]
+   emailAddress:
+      findBy: xpath
+      locator: //android.widget.EditText[1]
+   password:
+      findBy: xpath
+      locator: //android.widget.EditText[2]
+   login:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Login"]
+   remmitOneImage:
+      findBy: xpath
+      locator: //android.widget.ImageView[1]
