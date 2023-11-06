@@ -1,0 +1,79 @@
+timeout: 10
+expectedTitle: Beneficiary
+elements:
+   beneficiaryButton:   
+      findBy: xpath
+      locator: //*[contains(@name,'Beneficiary')]
+   addBeneficiaryBtn:   
+      findBy: name
+      locator: Add Beneficiary
+   firstName:
+      findBy: xpath 
+      locator: //*[contains(@name,'First Name')]
+   middleName:
+      findBy: xpath
+      locator: //*[contains(@name,'Middle Name')]
+   lastName :
+      findBy: xpath
+      locator: //*[contains(@name,'Last Name')]
+   moblieNo:     
+      findBy: xpath
+      locator: //*[contains(@name,'Mobile Number')]
+   telephoneNo:
+      findBy: xpath
+      locator: //*[contains(@name,'Telephone Number')]
+   address:
+      findBy: xpath
+      locator: //*[contains(@name,'Address 1')]
+   city:
+      findBy: xpath
+      locator: //*[contains(@name,'City')]
+   state:
+      findBy: xpath
+      locator: //*[contains(@name,'State')]
+   pincode:  
+      findBy: xpath
+      locator: //*[contains(@name,'Postcode / Zipcode')]
+   selectIdentificationType:
+      findBy: xpath
+      locator: //*[contains(@name,'Identification Type')]
+   passportOption:
+      findBy: xpath
+      locator: //*[contains(@name,'PASSPORT')]
+   saveButton:
+      findBy: name
+      locator: Save
+   addedBenificiary:
+      findBy: name
+      locator: abc
+   nextButton:
+      findBy: name
+      locator: next
+   addedBeneficiary:
+      findBy: xpath
+      locator: //*[contains(@name,'REMITONE TEST AUTOMATION')]
+   editButton :
+      findBy: name
+      locator: abc
+   searchBox:
+      findBy: xpath
+      locator: //*[contains(@name,'Search Beneficiary…')]
+   searchedResult:
+      findBy: xpath
+      locator: //*[contains(@value,'JOHN DOE')]
+   sucessfulMsg:
+      findBy: name
+      locator: Beneficiary Successfully Updated !
+
+   
+   
+   
+   
+    
+   
+   
+   
+   
+      
+
+                                                                                                                                                                                                                                                                                           

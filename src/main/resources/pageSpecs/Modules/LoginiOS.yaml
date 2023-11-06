@@ -1,0 +1,120 @@
+timeout: 10
+expectedTitle: Login
+elements:
+   dismissAppButton:
+      findBy: name
+      locator: IGNORE
+   signUpButton:
+      findBy: name
+      locator: Sign Up
+   securityPinLogin:   
+      findBy: name
+      locator: Login with Security Pin
+   loginWithPassword:   
+      findBy: name
+      locator: Login with your password
+   loginButton:
+      findBy: name
+      locator: Existing User? Login
+   loginScreen:
+      findBy: name
+      locator: Login with email
+   walletOption:
+      findBy: name
+      locator: Wallet
+   emailField:
+      findBy: xpath
+      locator: //*[contains(@name,'Email Address')]
+   passwordField:   
+      findBy: xpath
+      locator: //*[contains(@name,'Password')]
+   confirmLogin:   
+      findBy: name
+      locator: Login
+   moreButton:   
+      findBy: xpath
+      locator: //*[contains(@name,'More')]
+   logoutButton:   
+      findBy: name
+      locator: Log Out
+   okButton:
+      findBy: name
+      locator: OK
+   logoutPopup:
+      findBy: name
+      locator: Are you sure you want to log out?
+   addBeneficiaryBtn:   
+      findBy: name
+      locator: Add Beneficiary
+   beneficiaryButton:   
+      findBy: xpath
+      locator: //*[contains(@name,'Beneficiary')]
+   firstName:
+      findBy: xpath 
+      locator: //*[contains(@name,'First Name')]
+   middleName:
+      findBy: xpath
+      locator: //*[contains(@name,'Middle Name')]
+   lastName :
+      findBy: xpath
+      locator: //*[contains(@name,'Last Name')]
+   moblieNo:     
+      findBy: xpath
+      locator: //*[contains(@name,'Mobile Number')]
+   telephoneNo:
+      findBy: xpath
+      locator: //*[contains(@name,'Telephone Number')]
+   address:
+      findBy: xpath
+      locator: //*[contains(@name,'Address 1')]
+   city:
+      findBy: xpath
+      locator: //*[contains(@name,'City')]
+   state:
+      findBy: xpath
+      locator: //*[contains(@name,'State')]
+   pincode:  
+      findBy: xpath
+      locator: //*[contains(@name,'Postcode / Zipcode')]
+   selectIdentificationType:
+      findBy: xpath
+      locator: //*[contains(@name,'Identification Type')]
+   passportOption:
+      findBy: xpath
+      locator: //*[contains(@name,'PASSPORT')]
+   saveButton:
+      findBy: name
+      locator: Save
+   addedBenificiary:
+      findBy: name
+      locator: abc
+   nextButton:
+      findBy: name
+      locator: next
+   addedBeneficiary:
+      findBy: name
+      locator: ABC AUTOMATION
+   editButton :
+      findBy: name
+      locator: abc
+   searchBox:
+      findBy: xpath
+      locator: //*[contains(@name,'Search Beneficiary…')]
+   searchedResult:
+      findBy: xpath
+      locator: //*[contains(@value,'JOHN DOE')]
+   contactinfoCity:
+      findBy: xpath
+      locator: abc
+   
+   
+   
+   
+    
+   
+   
+   
+   
+      
+
+                                                                                                                                                                                                                                                                                           

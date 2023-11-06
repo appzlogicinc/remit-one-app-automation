@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.remitOne.automation.framework.TestSession;
-import com.remitOne.home.po.LoginPO;
+import com.remitOne.home.po.BeneficiaryiOSPO;
+import com.remitOne.home.po.LoginiOSPO;
 import com.remitOne.utils.PropFileHandler;
 
 public class StepDefinitionInit {
@@ -17,7 +18,8 @@ public class StepDefinitionInit {
      *  static PO_File_Name poClassObject ;
      */
 	
-	static LoginPO loginpo;
+	static LoginiOSPO loginiospo;
+	static BeneficiaryiOSPO beneficiaryiospo;
 
 	
 	public TestSession getTestSession() throws Exception {
@@ -36,7 +38,8 @@ public class StepDefinitionInit {
 		/**
 		 *   poClassObject =new PO_File_Name(session); 
 		 */
-		loginpo = new LoginPO(session);
+		loginiospo = new LoginiOSPO(session);
+		beneficiaryiospo = new BeneficiaryiOSPO(session);
 
         
         
@@ -45,6 +48,12 @@ public class StepDefinitionInit {
 //		}
 
 		return session;
+	}
+
+
+	private BeneficiaryiOSPO BeneficiaryPO(TestSession session2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
