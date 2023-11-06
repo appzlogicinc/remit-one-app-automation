@@ -1,0 +1,34 @@
+timeout: 10
+expectedTitle: VerifyLogout
+elements:
+   dismissAppButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="IGNORE"]
+   LoginButton:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Existing User? Login"]
+   emailAddress:
+      findBy: xpath
+      locator: //android.widget.EditText[1]
+   password:
+      findBy: xpath
+      locator: //android.widget.EditText[2]
+   login:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="Login"]
+   moreOptions:
+      findBy: xpath
+      locator: (//android.widget.ImageView[@class='android.widget.ImageView'])[14]
+   Logout:
+      findBy: xpath
+      locator: //android.widget.ImageView[@content-desc="Log Out"]
+   message:
+      findBy: xpath
+      locator: //android.view.View[@content-desc="Are you sure you want to log out?"]
+   Ok:
+      findBy: xpath
+      locator: //android.widget.Button[@content-desc="OK"]
+   
+      
+      
+      
