@@ -19,6 +19,9 @@ import cucumber.api.DataTable;
 public class BeneficiaryiOSPO extends Page{
 	WebDriverWait wait = new WebDriverWait(session.driver, 60);
 
+	static String firstName;
+	static String lastName;
+
 	public BeneficiaryiOSPO(TestSession session) throws Exception {
 		super(session, "Modules/BeneficiaryiOS");
 	}
@@ -40,8 +43,8 @@ public class BeneficiaryiOSPO extends Page{
 
 	public void enterDetails(Map<String, String> details) {
 		
-		String firstName = details.get("FirstName");
-		String lastName = details.get("LastName");
+		 firstName = details.get("FirstName");
+		 lastName = details.get("LastName");
 		String mobileNo = details.get("MobileNumber");
 		String telephponeNo = details.get("TelephoneNumber");
 		String address = details.get("Address");
@@ -72,7 +75,7 @@ public class BeneficiaryiOSPO extends Page{
 
 	public boolean verifyAddedBeneficiary() {
 	    
-		return element("addedBeneficiary").isDisplayed();
+		return session.driver.findElement(By.xpath("(//*[contains(name(),'"+firstName+" "+lastName+"')])")).isDisplayed();
 	}
 
 	public void clickAdeddBeneficiary() {
