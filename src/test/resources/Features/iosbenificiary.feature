@@ -9,23 +9,25 @@ Background:
   Then I verify User is logged in
   When I click on Beneficiary button present on navigation bar
   
- @addBeneficiary
+ @addBeneficiary 
 Scenario: Verify User is able to add Beneficiary
   When I click on Add Beneficiary button
   Then I verify "Create Beneficiary" Screen display
   When I enter all the valid details 
-      | FirstName         | olive    | 
-      | LastName          | Test     | 
-      | MobileNumber      | 987654321| 
-      | TelephoneNumber   | 456789012| 
-      | Address           | Street1  |
-      | City              | test     | 
-      | State             | test     |
-      | Postcode          | 12345    | 
-  When I Save the details
-#  Then I verify benificiary has been added sucessfully
+      | FirstName         | jacob   |
+      | MiddleName        | smith   | 
+      | LastName          | test    | 
+      | MobileNumber      | 1111111 | 
+      | TelephoneNumber   | 0987890 | 
+      | Address           | street11|
+      | City              | dubai   | 
+      | State             | UAE     |
+      | Postcode          | 98765   | 
+ When I Save the details
+ Then I verify "Search Beneficiary…" Screen display
+ Then I verify benificiary has been added sucessfully
  
-   @editBeneficiary
+   @editBeneficiary 
 Scenario: Verify User is able to edit Beneficiary
   When I click on added benificiary
  # When I click on edit button
@@ -37,9 +39,10 @@ Scenario: Verify User is able to edit Beneficiary
   When I Save the details
   Then I verify sucessful message displayed
   
-     @searchBeneficiary
+     @searchBeneficiary @test
 Scenario: Verify User is able to search Beneficiary
-  When I enter "john doe" in search beneficiary box
+  Then I verify "Search Beneficiary…" Screen display
+  When I enter "abc" in search beneficiary box
   Then I verify able to search the beneficiary name
   
   

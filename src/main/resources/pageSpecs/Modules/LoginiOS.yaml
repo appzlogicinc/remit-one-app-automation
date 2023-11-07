@@ -103,11 +103,18 @@ elements:
    searchedResult:
       findBy: xpath
       locator: //*[contains(@value,'JOHN DOE')]
-   contactinfoCity:
+   profileButton:   
       findBy: xpath
-      locator: abc
-   
-   
+      locator: //*[contains(@name,'Profile')]
+   homeButton:   
+      findBy: xpath
+      locator: //*[contains(@name,'Home')]
+   beneficiaryButton:   
+      findBy: xpath
+      locator: //*[contains(@name,'Beneficiary')]  
+   country:
+      findBy: name
+      locator: Afghanistan
    
    
     

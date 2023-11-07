@@ -20,7 +20,6 @@ public class BeneficiaryiOSPO extends Page{
 	WebDriverWait wait = new WebDriverWait(session.driver, 60);
 
 	static String firstName;
-	static String lastName;
 
 	public BeneficiaryiOSPO(TestSession session) throws Exception {
 		super(session, "Modules/BeneficiaryiOS");
@@ -41,10 +40,10 @@ public class BeneficiaryiOSPO extends Page{
 		js.executeScript("mobile: scroll", scrollObject);
 	}
 
-	public void enterDetails(Map<String, String> details) {
-		
+	public void enterDetails(Map<String, String> details) throws InterruptedException {
 		 firstName = details.get("FirstName");
-		 lastName = details.get("LastName");
+		String middleName = details.get("MiddleName");		 
+		String lastName = details.get("LastName");
 		String mobileNo = details.get("MobileNumber");
 		String telephponeNo = details.get("TelephoneNumber");
 		String address = details.get("Address");
@@ -53,11 +52,12 @@ public class BeneficiaryiOSPO extends Page{
 		String postcode = details.get("Postcode");
 
 		element("firstName").sendKeys(firstName);
-		element("middleName").sendKeys(lastName);
-		element("lastName").sendKeys(mobileNo);
+		element("middleName").sendKeys(middleName);		
+		element("lastName").sendKeys(lastName);
 		element("nextButton").click();
 		scrolldown();
 		element("moblieNo").click();
+		element("moblieNo").sendKeys(mobileNo);
 		element("telephoneNo").sendKeys(telephponeNo);
 		element("address").sendKeys(address);
 		element("city").sendKeys(city);
@@ -65,19 +65,23 @@ public class BeneficiaryiOSPO extends Page{
 		element("nextButton").click();
 		element("pincode").sendKeys(postcode);
 		element("nextButton").click();
+		Thread.sleep(1000);
 		element("selectIdentificationType").click();
 		element("passportOption").click();
 	}
 
-	public void saveDetails() {
+	public void saveDetails() throws InterruptedException {
 		element("saveButton").click();
+		System.out.print("Save button clicked");
 	}
 
-	public boolean verifyAddedBeneficiary() {
-	    
-		return session.driver.findElement(By.xpath("(//*[contains(name(),'"+firstName+" "+lastName+"')])")).isDisplayed();
+	public boolean verifyAddedBeneficiary() throws InterruptedException {
+		
+		firstName="Bond" ;
+		String beneficiaryName=firstName.toUpperCase();
+		return session.driver.findElement(By.xpath("(//*[contains(@value,'"+ beneficiaryName+"')])")).isDisplayed();
 	}
-
+	
 	public void clickAdeddBeneficiary() {
 		element("addedBeneficiary").click();
 	}

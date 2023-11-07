@@ -5,7 +5,6 @@ import org.junit.Assert;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-
 public class LoginiOSStepDef extends StepDefinitionInit {
 
 	@When("^I launch the application$")
@@ -72,5 +71,21 @@ public class LoginiOSStepDef extends StepDefinitionInit {
 	public void i_verify_user_is_able_to_logged_out_from_app() throws Throwable {
 		Assert.assertTrue(loginiospo.verifyLoggedOut());
 	}
+
+	@Then("^I verify \"([^\"]*)\" button display$")
+	public void i_verify_something_button_appears(String verifyButton) throws Throwable {
+		Assert.assertTrue(loginiospo.verifyButton(verifyButton));
+	}
+
+	@Then("^I verify navigation bar is display at bottom$")
+	public void i_verify_navigation_bar_is_display_at_bottom() throws Throwable {
+		Assert.assertTrue(loginiospo.verifyNavigationBar());
+	}
+
+	@Then("^I verify Country field displayed over dashboard screen$")
+	public void i_verify_country_field_displayed_over_dashboard_screen() throws Throwable {
+		Assert.assertTrue(loginiospo.verifyCountry());
+	}	
+	  
 
 }

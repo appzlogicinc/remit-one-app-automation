@@ -4,14 +4,18 @@ Background:
   When I launch the application
   When I ignore the poup
  
- @Login
+ @Login 
   Scenario: Verify user able to login with valid credentials
   When I click on Login button
   When I enter valid email and password
   When I click on confirm Login button
   Then I verify User is logged in
-   
-   @Logout
+  And I verify "Wallet" button display
+  And I verify "Send Now" button display
+  And I verify navigation bar is display at bottom
+  And I verify Country field displayed over dashboard screen 
+
+   @Logout 
   Scenario: verify user is able to logout
   When I click on Login button
   When I enter valid email and password

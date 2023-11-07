@@ -102,4 +102,30 @@ public class LoginiOSPO extends Page {
 		return element("loginButton").isDisplayed();
 	}
 
+	public boolean verifyButton(String button) {
+		String x = "//*[contains(@name,'";
+		String y = "')]";
+		String xpath = x + button + y;
+		WebDriverWait wait = new WebDriverWait(session.driver, 180);
+		WebElement locate = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		return locate.isEnabled();
+	}
+
+	public boolean verifyNavigationBar() {
+		boolean status = false;
+		WebElement home = element("homeButton");
+		WebElement benificiary = element("beneficiaryButton");
+		WebElement profile = element("profileButton");
+		WebElement more = element("moreButton");
+
+		if (home.isDisplayed() && benificiary.isDisplayed() && profile.isDisplayed() && more.isDisplayed()) {
+			status = true;
+		}
+		return status;
+	}
+	
+	public boolean verifyCountry() {
+		return element("country").isDisplayed();
+	}
+
 }
