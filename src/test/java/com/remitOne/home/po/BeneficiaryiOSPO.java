@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -133,5 +134,21 @@ public class BeneficiaryiOSPO extends Page{
 		
 		return element("sucessfulMsg").isDisplayed();
 	}
+	
+	public void clickButton(String button) {
+		String x = "//*[contains(@name,'";
+		String y = "')]";
+		String xpath = x + button + y;
+		WebDriverWait wait = new WebDriverWait(session.driver, 180);
+		WebElement locate = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		 locate.click();
+	}
+	
+	public void selectBeneficiary(String beneficiaryName) {
+		beneficiaryName.toUpperCase();
+		WebElement name= session.driver.findElement(By.name(beneficiaryName));
+		name.click();
+	}
+	
 	
 }

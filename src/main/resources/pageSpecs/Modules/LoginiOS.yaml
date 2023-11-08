@@ -115,6 +115,18 @@ elements:
    country:
       findBy: name
       locator: Afghanistan
+   key1:
+      findBy: name
+      locator: 1
+   key2:
+      findBy: name
+      locator: 2
+   key3:
+      findBy: name
+      locator: 3
+   key4:
+      findBy: name
+      locator: 4
    
    
     

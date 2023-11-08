@@ -5,6 +5,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import io.cucumber.datatable.*;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -28,7 +29,12 @@ public class BeneficiaryiOSStepDef extends StepDefinitionInit {
 
 	@When("^I Save the details$")
 	public void i_save_the_details() throws Throwable {
-		beneficiaryiospo.saveDetails();
+		beneficiaryiospo.scrolldown();
+	}
+	
+	@When("^I scroll the screen downwards$")
+	public void i_scroll_the_screen_downwards() throws Throwable {
+		beneficiaryiospo.scrolldown();
 	}
 
 	@Then("^I verify benificiary has been added sucessfully$")
@@ -71,4 +77,17 @@ public class BeneficiaryiOSStepDef extends StepDefinitionInit {
 	public void i_verify_latest_address_is_diaplyed() throws Throwable {
 		Assert.assertTrue(beneficiaryiospo.verifySucesfulMsg());
 	}
+	
+	@When("^I click on \"([^\"]*)\" button$")
+	public void i_click_on_something_button(String Button) throws Throwable {
+		beneficiaryiospo.clickButton(Button);
+	}
+	
+	@When("^I select \"([^\"]*)\" beneficiay from the list$")
+	public void i_select_something_beneficiary_form_the_list(String beneficiaryName) throws Throwable {
+		beneficiaryiospo.selectBeneficiary(beneficiaryName);
+	}
+	
+
+	
 }

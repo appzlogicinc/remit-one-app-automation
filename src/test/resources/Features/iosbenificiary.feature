@@ -46,7 +46,17 @@ Scenario: Verify User is able to search Beneficiary
   Then I verify able to search the beneficiary name
   
   
+ @sendMoney 
+Scenario: Verify User is able to send money to Beneficiary
+  When I select "John doe" beneficiay from the list
+  Then I verify "Beneficiary Details" Screen display  
+  When I click on "Send Money" button
+  Then I verify "Select Transaction Type" Screen display  
+ 
   
+     
+  
+
   
   
  

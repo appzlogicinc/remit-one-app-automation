@@ -45,7 +45,11 @@ public class LoginiOSPO extends Page {
 			element("loginButton").click();
 			Thread.sleep(3000);
 		} catch (Exception e) {
-			element("loginWithPassword").click();
+			element("key1").click();
+			element("key2").click();
+			element("key3").click();
+			element("key4").click();
+			Thread.sleep(3000);
 		}
 	}
 
@@ -54,19 +58,14 @@ public class LoginiOSPO extends Page {
 	}
 
 	public void enterValidCreds() {
-		try {
-			if (element("loginScreen").isDisplayed()) {
-				WebElement email = element("emailField");
-				email.click();
-				email.sendKeys("dhawal@appzlogic.com");
-				WebElement password = element("passwordField");
-				password.click();
-				password.sendKeys("Appzlogic@123");
-				session.driver.navigate().back();
-			}
-		} catch (Exception e) {
-			// element("loginWithPassword").click();
-			element("passwordField").sendKeys("Appzlogic@123");
+		if (element("loginScreen").isDisplayed()) {
+			WebElement email = element("emailField");
+			email.click();
+			email.sendKeys("dhawal@appzlogic.com");
+			WebElement password = element("passwordField");
+			password.click();
+			password.sendKeys("Appzlogic@123");
+			session.driver.navigate().back();
 		}
 
 	}
@@ -123,7 +122,7 @@ public class LoginiOSPO extends Page {
 		}
 		return status;
 	}
-	
+
 	public boolean verifyCountry() {
 		return element("country").isDisplayed();
 	}
