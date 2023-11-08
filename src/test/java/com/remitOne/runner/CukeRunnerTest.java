@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 
 		monochrome = true, glue = { "com.remitOne.stepdefinitions" }
 
-		, tags = "@remitOneEndToEnd", features = { "./src/test/resources/Features" }
+		, tags = "@demo", features = { "./src/test/resources/Features" }
 
 )
 
