@@ -4,7 +4,7 @@ Background:
   When I launch the application
   When I ignore the poup
  
- @Login 
+ @Login @demo
   Scenario: Verify user able to login with valid credentials
   When I click on Login button
   When I enter valid email and password
@@ -14,6 +14,12 @@ Background:
   And I verify "Send Now" button display
   And I verify navigation bar is display at bottom
   And I verify Country field displayed over dashboard screen 
+
+   @Login @demo
+  Scenario: Verify user able to login with valid credentials
+  When I click on Login button
+  When I enter valid email and password
+  Then I verify User is logged in
 
    @Logout 
   Scenario: verify user is able to logout
