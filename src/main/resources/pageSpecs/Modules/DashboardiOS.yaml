@@ -1,0 +1,24 @@
+timeout: 10
+expectedTitle: Dashboard
+elements:
+   paymentDropdown:   
+      findBy: xpath
+      locator: //*[contains(@name,'Select Payment Method')]
+   loadAmountField:
+      findBy: xpath
+      locator: //*[contains(@name,'Load Amount')]
+   currencyDropdown:
+      findBy: xpath
+      locator: //*[contains(@name,'Select Currency')]
+   country:
+      findBy: name
+      locator: Afghanistan
+   fromDropdown:
+      findBy: xpath
+      locator: //*[contains(@name,'Select From')][1]
+   toDropdown: 
+      findBy: xpath
+      locator: //*[contains(@name,'Select From')][2]
+   moveAmtField:
+      findBy: xpath
+      locator: //*[contains(@name,'Send Amount')]

@@ -2,5 +2,5 @@ Feature: End to End
 
 
 @remitOneEndToEnd
-Scenario: Sign up
+Scenario: Click
  When I click on signup button 
